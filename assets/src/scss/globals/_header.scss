@@ -1,0 +1,13 @@
+.site-header {
+	background-color: color(primary, base);
+	padding: 20px;
+}
+
+.site-header-wrapper {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	max-width: $global-grid-size;
+	margin: 0 auto;
+}

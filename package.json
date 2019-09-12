@@ -1,0 +1,39 @@
+{
+	"name": "wsuwp-theme-lodge-child",
+	"version": "0.0.1",
+	"description": "A child theme for the WSU WP Lodge theme.",
+	"private": true,
+	"main": "src/index.js",
+	"dependencies": {
+		"normalize.css": "^8.0.1",
+		"webpack": "^4.39.3",
+		"webpack-cli": "^3.3.8"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.6.1",
+		"css-loader": "^3.2.0",
+		"mini-css-extract-plugin": "^0.8.0",
+		"modularscale-sass": "^3.0.8",
+		"node-sass": "^4.12.0",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"postcss-loader": "^3.0.0",
+		"sass-loader": "^8.0.0",
+		"terser-webpack-plugin": "^2.0.1",
+		"webpack-dev-server": "^3.8.0",
+		"webpack-livereload-plugin": "^2.2.0"
+	},
+	"scripts": {
+		"start": "webpack --env.NODE_ENV=development --watch",
+		"build": "webpack --env.NODE_ENV=production"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/washingtonstateuniversity/wsuwp-theme-lodge.git"
+	},
+	"author": "WSU University Communications",
+	"license": "GPL-2.0",
+	"bugs": {
+		"url": "https://github.com/washingtonstateuniversity/wsuwp-theme-lodge/issues"
+	},
+	"homepage": "https://github.com/washingtonstateuniversity/wsuwp-theme-lodge#readme"
+}

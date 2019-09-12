@@ -1,0 +1,20 @@
+
+/******************************************************************
+Stylesheet: Editor Styles
+Description: Styles to control how the editor looks to users
+******************************************************************/
+
+/* Main column width */
+.wp-block {
+    max-width: 720px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
