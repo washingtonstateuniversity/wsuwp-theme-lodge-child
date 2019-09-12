@@ -15,7 +15,7 @@ module.exports = env => {
 		},
 		output: {
 			path: path.resolve(__dirname, './assets/dist'),
-			filename: 'scripts.js'
+			filename: 'child-scripts.js'
 		},
 		mode: DEV ? 'development' : 'production',
 		devtool: 'source-map',
@@ -75,7 +75,7 @@ module.exports = env => {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'main.css'
+				filename: 'child-main.css'
 			}),
 			new LiveReloadPlugin(),
 		]

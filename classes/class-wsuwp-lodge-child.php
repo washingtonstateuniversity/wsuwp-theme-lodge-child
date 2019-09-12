@@ -13,11 +13,13 @@ final class WSU_WP_Lodge_Child
 	 */
 	static public function enqueue_scripts()
 	{
-		wp_enqueue_style( 'wsuwp-lodge-child-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css') );
+		wp_enqueue_style( 'wsuwp-lodge-webpack-styles', get_template_directory_uri() . '/assets/dist/main.css' );
 
-		wp_enqueue_style( 'wsuwp-lodge-child-webpack-styles', get_stylesheet_directory_uri() . '/assets/dist/main.css', array(), filemtime(get_template_directory() . '/assets/dist/main.css') );
+		wp_enqueue_style( 'wsuwp-lodge-child-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css') );
 
-		wp_enqueue_script( 'wsuwp-lodge-child-scripts', get_stylesheet_directory_uri() . '/assets/dist/scripts.js', array(), filemtime(get_template_directory() . '/assets/dist/scripts.js'), true );
+		wp_enqueue_style( 'wsuwp-lodge-child-webpack-styles', get_stylesheet_directory_uri() . '/assets/dist/child-main.css', array(), filemtime(get_stylesheet_directory() . '/assets/dist/child-main.css') );
+
+		wp_enqueue_script( 'wsuwp-lodge-child-scripts', get_stylesheet_directory_uri() . '/assets/dist/child-scripts.js', array(), filemtime(get_stylesheet_directory() . '/assets/dist/child-scripts.js'), true );
 
 		$whitelist = array( '127.0.0.1', '::1', '192.168.50.*' );
 		$ip = $_SERVER['REMOTE_ADDR'];
