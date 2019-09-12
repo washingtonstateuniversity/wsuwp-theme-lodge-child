@@ -14,7 +14,7 @@ require_once 'classes/class-wsuwp-lodge-child.php';
 /**
  * Actions
  */
-add_action('wp_enqueue_scripts', 'WSU_WP_Lodge::enqueue_scripts');
+add_action('wp_enqueue_scripts', 'WSU_WP_Lodge_Child::enqueue_scripts');
 
 /**
  * Filters
