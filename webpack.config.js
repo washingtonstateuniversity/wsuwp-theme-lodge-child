@@ -18,7 +18,7 @@ module.exports = env => {
 			filename: 'child-scripts.js'
 		},
 		mode: DEV ? 'development' : 'production',
-		devtool: 'source-map',
+		devtool: DEV ? 'inline-source-map' : 'source-map',
 		module: {
 			rules: [
 				{
@@ -27,11 +27,15 @@ module.exports = env => {
 						MiniCssExtractPlugin.loader,
 						{
 							loader: "css-loader",
+							options: {
+								sourceMap: true
+							}
 						},
 						{
 							loader: "postcss-loader",
 							options: {
 								ident: "postcss",
+								sourceMap: true,
 								plugins: () => [
 									autoprefixer({
 										browsers: [
@@ -44,7 +48,12 @@ module.exports = env => {
 								]
 							}
 						},
-						"sass-loader"
+						{
+							loader: "sass-loader",
+							options: {
+								sourceMap: true,
+							}
+						}
 					],
 				}
 			]
